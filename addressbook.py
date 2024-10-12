@@ -38,7 +38,7 @@ class Record:
             print(f"Phone {phone} not found in record {self.name}.")
 
     def add_phone(self, phone: Phone):
-        if len(phone.value) == 13:  # Validate phone length
+        if len(phone.value) == 13:
             self.phones.append(phone)
         else:
             raise ValueError("Phone number must consist of 10 digits.")
@@ -54,7 +54,7 @@ class Record:
         return None
 
     def add_birthday(self, birthday: Birthday):
-        if self.birthday is None:  # Allow only one birthday
+        if self.birthday is None:
             self.birthday = birthday
 
     def __repr__(self):

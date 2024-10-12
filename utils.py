@@ -1,7 +1,7 @@
 import re
 from datetime import datetime
 
-PHONE_CODE_NUMBER_BY_DEFAULT = '+38' # Can be changed to any country code
+PHONE_CODE_NUMBER_BY_DEFAULT = '+38'
 PHONE_CODE_NUMBER_BY_DEFAULT_WITHOUT_PLUS = '38'
 
 def normalize_phone(phone_number: str) -> str:

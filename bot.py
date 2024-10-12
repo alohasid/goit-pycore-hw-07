@@ -55,7 +55,7 @@ def change_contact(arguments, book):
     record = book.find(Name(name))
     
     if record:
-        record.edit_phone(Phone(record.phones[0].value), Phone(phone))  # Change the first phone number for simplicity
+        record.edit_phone(Phone(record.phones[0].value), Phone(phone))
         return "Contact updated."
     else:
         raise KeyError(f"Contact {name} not found.")
