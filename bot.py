@@ -34,7 +34,9 @@ def add_contact(arguments, book):
     name, phone = arguments
     record = book.find(Name(name))
     
-    if record is None:
+    if len(phone) != 10:
+        raise ValueError("Phone number must consist of 10 digits.")
+    elif record is None:
         record = Record(Name(name))
         record.add_phone(Phone(phone))
         book.add_record(record)
